@@ -1,0 +1,13 @@
+# Core Python
+pandas>=2.0
+numpy>=1.24
+
+# Database connectivity
+sqlalchemy>=2.0
+psycopg2-binary>=2.9
+
+# dbt (Postgres adapter)
+dbt-postgres>=1.7
+
+# Utilities
+python-dotenv>=1.0
