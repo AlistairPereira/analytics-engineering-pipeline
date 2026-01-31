@@ -1,0 +1,11 @@
+payment_id,order_id,payment_date,amount_paid,payment_method
+P9001,O1001,2023-02-01,120.50,credit_card
+P9002,O1002,2023-02-06,89.99,Debit Card
+P9003,O1003,2023-03-11,250.00,UPI
+P9004,O1004,2023-04-03,,credit_card
+P9005,O1005,2023-04-16,75.00,cash
+P9006,O1006,2023-05-02,-20.00,credit_card
+P9007,O1007,2023/06/06,300.00,creditcard
+P9008,O1008,2023-06-21,150.75,
+P9009,O1010,2023-08-06,0,credit_card
+P9010,O1011,2023-08-20,220.40,bank_transfer

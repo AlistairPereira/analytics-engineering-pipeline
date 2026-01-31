@@ -1,0 +1,13 @@
+customer_id,full_name,email,signup_date,country
+C001,John Doe,john.doe@gmail.com,2023-01-15,USA
+C002, jane smith ,JANE.SMITH@GMAIL.COM,2023/02/10,uk
+C003,Rahul Verma,rahul.verma@gmail.com,15-03-2023,India
+C004,,missing.name@gmail.com,2023-04-01,USA
+C005,Alice Brown,alice.brown@gmail,2023-04-20,Canada
+C006,Bob Martin,bob.martin@gmail.com,,USA
+C007,Emily Davis,emily.davis@gmail.com,2023-06-05,usa
+C008,John Doe,john.duplicate@gmail.com,2023-01-15,USA
+C009,Li Wei,li.wei@gmail.com,2023-07-18,China
+C010, Carlos Lopez ,carlos.lopez@gmail.com,2023-08-01,Mexico
+C011,Anna Müller,anna.mueller@gmail.com,2023-08-15,Germany
+C012,Tom,,2023-09-01,UK
