@@ -1,0 +1,77 @@
+version: 2
+
+models:
+
+  - name: dim_customers
+    description: "Customer dimension table containing one row per customer"
+    columns:
+      - name: customer_key
+        description: "Surrogate key for customer dimension"
+        tests:
+          - not_null
+          - unique
+
+      - name: customer_id
+        description: "Business identifier for customer"
+        tests:
+          - not_null
+          - unique
+
+      - name: email
+        description: "Customer email address"
+        tests:
+          - not_null
+
+
+  - name: fact_orders
+    description: "Fact table containing customer orders"
+    columns:
+      - name: order_key
+        description: "Surrogate key for orders fact"
+        tests:
+          - not_null
+          - unique
+
+      - name: customer_key
+        description: "Foreign key to dim_customers"
+        tests:
+          - not_null
+          - relationships:
+              to: ref('dim_customers')
+              field: customer_key
+
+      - name: order_id
+        description: "Business identifier for order"
+        tests:
+          - not_null
+          - unique
+
+      - name: order_amount
+        description: "Total monetary value of the order"
+
+
+  - name: fact_payments
+    description: "Fact table containing payments made for orders"
+    columns:
+      - name: payment_key
+        description: "Surrogate key for payments fact"
+        tests:
+          - not_null
+          - unique
+
+      - name: order_key
+        description: "Foreign key to fact_orders"
+        tests:
+          - not_null
+          - relationships:
+              to: ref('fact_orders')
+              field: order_key
+
+      - name: payment_id
+        description: "Business identifier for payment"
+        tests:
+          - not_null
+          - unique
+
+      - name: payment_amount
+        description: "Amount paid in the transaction"
